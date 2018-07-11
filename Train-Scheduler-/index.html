@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Scheduler</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+<body>
+    <div class="container" id="header">Train Scheduler</div>
+    <div class="container" id="tablecontainer">
+
+        <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody id="tBody">
+            </tbody>
+          </table>
+          
+    </div>
+    
+    <div class="container formcontainer">
+        
+        <form>
+        
+            <div class="form-row">
+                    <label for="inputTrainName">Train Name</label>
+                    <input type="text" class="form-control" id="trainNameInput">
+            </div>
+
+            <div class="form-row">
+                    <label for="inputDestination">Destination</label>
+                    <input type="text" class="form-control" id="destinationInput">
+            </div>
+
+            <div class="form-row">
+                    <label for="inputFirstTrain">First Train Time (HH:mm)</label>
+                    <input type="time" class="form-control" id="firstTrainInput" placeholder="ex: 16:30 if it is 4:30 P.M.">
+            </div>
+
+            <div class="form-row">
+                    <label for="inputFrequency">Frequency</label>
+                    <input type="number" class="form-control" id="frequencyInput" placeholder="in minutes">
+            </div>
+            
+            <button type="submit" class="btn btn-dark" id="subBtn">Submit</button>
+
+        </form>
+
+    </div>
+<br>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+</html>
